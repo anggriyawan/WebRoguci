@@ -87,6 +87,10 @@ nav {
   transform: translateX(0%);
 }
 
+.nav-active li {
+    animation: navLinkFade 0.5s ease forwards;
+} 
+
 @keyframes navLinkFade {
   from {
     opacity: 0;
