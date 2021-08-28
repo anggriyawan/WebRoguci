@@ -20,17 +20,17 @@ nav {
   font-size: 20px;
 }
 
-.nav-links {
+#nav-links {
   display: flex;
   justify-content: space-around;
   width: 25%;
 }
 
-.nav-links li {
+#nav-links li {
   list-style: none;
 }
 
-.nav-links a {
+#nav-links a {
   color: whitesmoke;
   text-decoration: none;
   font-weight: bold;
@@ -38,12 +38,12 @@ nav {
   letter-spacing: 2px;
 }
 
-.burger {
+#burger {
   display: none;
   cursor: pointer;
 }
 
-.burger div {
+#burger div {
   width: 25px;
   height: 4px;
   background-color: whitesmoke;
@@ -52,16 +52,10 @@ nav {
 }
 
 @media screen and (max-width: 1080px) {
-  .nav-links {
-    width: 50%;
-  }
-}
-
-@media screen and (max-width: 1080px) {
   body {
     overflow-x: hidden;
   }
-  .nav-links {
+  #nav-links {
     position: absolute;
     right: 0px;
     height: 92vh;
@@ -83,12 +77,11 @@ nav {
   }
 }
 
-.nav-active {
+#burger.toggle + ul#nav-links {
   transform: translateX(0%);
 }
-
-.nav-active li {
-    animation: navLinkFade 0.5s ease forwards;
+#burger.toggle + ul#nav-links li {
+  animation: navLinkFade 0.5s ease forwards;
 } 
 
 @keyframes navLinkFade {
